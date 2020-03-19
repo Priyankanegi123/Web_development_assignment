@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-B_Q2</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Enter the number: "));
+        var res = [];
+        var flag;
+        for(var i=2;i<=n && n>1;i++)
+        {
+            flag = false;
+            while(n%i==0)
+            {
+                flag = true;
+                n/=i;
+            }
+            if(flag == true)
+                res.push(i);
+        }
+        alert(res.join(" "));
+    </script>
+</body>
+</html>
