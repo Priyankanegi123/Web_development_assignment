@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-C_Q4</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Enter the string: ");
+        var dSum = 0,l = '0'.charCodeAt(),r = '9'.charCodeAt(),res = [],data = str.split(''),pos = -1;
+
+        for (var i = 0; i < data.length; i++) {
+            if (l <= data[i].charCodeAt() && data[i].charCodeAt() <= r)
+                dSum += data[i].charCodeAt() - l;
+            else 
+                pos = i;
+        }
+        for (var i = 0; i < 10; i++) {
+            if ((dSum + i) % 3 === 0) {
+                data[pos] = String.fromCharCode(l + i);
+                res.push(data.join(''));
+            }
+        }
+        alert(res);
+    </script>
+</body>
+</html>
