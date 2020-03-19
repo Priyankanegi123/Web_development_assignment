@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-B_Q3</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Enter a number: "));
+        var c = 0;
+        while (n !== 0) {
+            if(n % 2 === 0)
+                c+=1;
+            n = Math.floor(n / 10);
+        }
+        alert(`No. of even digits = ${c}`);
+    </script>
+</body>
+</html>
