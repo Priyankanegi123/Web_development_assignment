@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-B_Q1</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Enter the string: ");
+        var result = [];
+        for (var i = 0; i < str.length; i++)
+        {
+            var co = str.charCodeAt(i) - 'a'.charCodeAt(0),
+            ch = 25 - co + 'a'.charCodeAt(0);
+            result.push(String.fromCharCode(ch));
+        }
+        alert(result.join(""));
+    </script>
+</body>
+</html>
