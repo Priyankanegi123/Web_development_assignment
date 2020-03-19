@@ -1,28 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Part-C_Q4</title>
-</head>
-<body>
-    <script>
-        var str = prompt("Enter the string: ");
-        var dSum = 0,l = '0'.charCodeAt(),r = '9'.charCodeAt(),res = [],data = str.split(''),pos = -1;
-
-        for (var i = 0; i < data.length; i++) {
-            if (l <= data[i].charCodeAt() && data[i].charCodeAt() <= r)
-                dSum += data[i].charCodeAt() - l;
-            else 
-                pos = i;
-        }
-        for (var i = 0; i < 10; i++) {
-            if ((dSum + i) % 3 === 0) {
-                data[pos] = String.fromCharCode(l + i);
-                res.push(data.join(''));
+<html>
+    <head>
+        <title>
+            Test
+        </title>   
+        <script>
+            function my_func()
+            {
+               var s_arr= document.getElementById("elems").value.split(" ")
+               var a=[]
+               for(var i=0;i< s_arr.length;i++)
+                    a.push(parseInt(s_arr[i]))
+                var temp
+                var my_string=""
+                for(var i=0;i<a.length;i++)
+                {
+                    for(var j=0;j<a.length-i-1;j++)
+                    {
+                        if(a[j]>a[j+1])
+                        {
+                            temp=a[j];
+                            a[j]=a[j+1];
+                            a[j+1]=temp;
+                        }
+                    }
+                }
+                for(var i=0;i<a.length;i++)  
+                    my_string+= a[i]+" "
+                document.getElementById("subs").innerHTML=my_string
             }
-        }
-        alert(res);
-    </script>
-</body>
+        </script>
+    </head>
+    <body">
+        <input type="text" id="elems"><br>
+        <input type="button" id="sort" value="sort" onclick="my_func()"><br>
+        <p id="subs"></p>
+    </body>
 </html>
