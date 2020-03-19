@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-C_Q5</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Enter a binary number: ");
+        var j,i=0, dec=0;
+        for(j = n.length-1 ; j>=0 ; j--)
+        {
+            dec = dec + ((n[j]-'0')*Math.pow(2,i));
+            i++;
+        }
+        alert(dec);
+    </script>
+</body>
+</html>
