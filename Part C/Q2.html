@@ -1,27 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Part-C_Q2</title>
-</head>
+<html>
 <body>
+    Click to know about the function Name
+    <br><br>
+    Output: 
+    <input type="text" placeholder="" id="o">
     <script>
-        var center = prompt("Enter the coordinates of the center seperated by a space: ");
-        var x = parseInt(center.split(" ")[0]);
-        var y = parseInt(center.split(" ")[1]);
-        var r = parseInt(prompt("Enter the radius: "));
-        var pt = prompt("Enter the coordinates of second point: ");
-        var a = parseInt(pt.split(" ")[0]);
-        var b = parseInt(pt.split(" ")[1]);        
-        var dist = (a - x) * (a - x) + (b - y) * (b - y);
-        r *= r;
-        if (dist < r) {
-            alert("true");
-        }
-        else {
-            alert("false");
+        function show(){
+            document.getElementById('o').value = arguments.callee.name;            
         }
     </script>
+    <button onclick="show()">Check</button> 
 </body>
 </html>
