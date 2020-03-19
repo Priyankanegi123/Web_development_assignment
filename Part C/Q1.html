@@ -1,21 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Part-C_Q1</title>
-</head>
-<body>
-    <script>
-        var str = prompt("Enter the string: ");
-        var result = [];
-        for (var i = 0; i < str.length; i++)
-        {
-            var co = str.charCodeAt(i) - 'a'.charCodeAt(0),
-            ch = 25 - co + 'a'.charCodeAt(0);
-            result.push(String.fromCharCode(ch));
-        }
-        alert(result.join(""));
-    </script>
-</body>
+<html>
+    <head>
+        <title>
+            Test
+        </title>   
+        <script>
+            function my_func()
+            {
+               var st= prompt("Enter string")
+               var max_len= st.length
+               sub_strings=""
+               for (var len = 1; len <= max_len; len++)  
+                {      
+                    for (var i = 0; i <=max_len-len; i++)  
+                    { 
+                    
+                        var j = i + len - 1;             
+                        for (var k = i; k <= j; k++)  
+                            sub_strings+=st[k] 
+                        
+                        sub_strings+="\n" 
+                    } 
+                }
+                document.getElementById("subs").innerHTML= sub_strings 
+            } 
+        </script>
+    </head>
+    <body onload="my_func()">
+        <p id="subs"></p>
+    </body>
 </html>
