@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Part-C_Q3</title>
-</head>
+<html>
 <body>
+    Enter String: 
+    <input type="text" placeholder="dog" id="input_x">
+    <br><br>
+    Output: 
+    <input type="text" placeholder="" id="output">
     <script>
-        var n = prompt("Enter n for n*n matrix: ");
-        var flag = true;
-        for(var i=0;i<n;i++)
-        {
-            for(var j=0;j<n;j++)
-            {
-                var a = prompt(`Enter the value at ${i+1},${j+1}: `);
-                if(i === j && a!=1)
-                    flag = false;
-                if(i !== j && a!=0)
-                    flag = false;
+        function display(){
+            var names = document.getElementById('input_x').value;
+            string="";
+            ss="";
+            namestring=names.split("");
+
+            for(j=0;j<namestring.length;j++) {
+                for(i=j;i<namestring.length;i++) {
+                    if(string.includes(namestring[i]))
+                        break;
+                    else
+                        string+=namestring[i];
+                 }
+                 if(ss.length<string.length)
+                     ss=string;
+                 string="";
             }
+            
+            document.getElementById('output').value = ss;
+            
         }
-        if(flag === true)
-            alert("It is a valid identity matrix.");
-        else
-            alert("It is NOT a valid identity matrix.");
     </script>
+    <button onclick="display()">Check</button> 
 </body>
 </html>
