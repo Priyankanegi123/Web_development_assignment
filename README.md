@@ -1,6 +1,6 @@
 # Web_development_assignment
 
-                                                Part A
+                                                    Part A
 
 Q1. Write a JavaScript program to change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a. 
 
@@ -26,7 +26,7 @@ console.log(bin_to_dec('100'));
 4
 
 
-                                                Part B
+                                                   Part B
 
 Q1. Write a JavaScript program to change the characters (lower case) in a string where a turns into z, b        turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into as
 
@@ -46,7 +46,7 @@ For x = true and y = false, the output should be logical_Nor(x, y) = false; For 
 
  
 
-                                                Part-C
+                                                   Part C
 
  
 
